@@ -22,7 +22,6 @@ def get_list_from_user(difficulty):
 
 
 def is_list_equal(random_numbers, user_numbers):
-    random_numbers()
     user_numbers.sort()
     os.system('cls' if os.name == 'nt' else 'clear')
     if random_numbers == user_numbers:
