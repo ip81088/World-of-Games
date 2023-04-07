@@ -30,6 +30,6 @@ def play(difficulty):
     guess = get_guess_from_user(usd)
     os.system('cls' if os.name == 'nt' else 'clear')
     if high >= guess >= low:
-        print('True')
+        return True
     else:
-        print('False')
+        return False

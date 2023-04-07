@@ -1,3 +1,11 @@
+import GuessGame
+import MemoryGame
+import CurrencyRouletteGame
+
+global difficulty, game_choice
+from Score import add_score
+
+
 def welcome(name):
     return 'Hello ' + name + ' and welcome to the World of Games (WoG). Here you can find many cool games to play.'
 
@@ -27,9 +35,16 @@ def load_game():
     if game_choice == 1:
         import MemoryGame
         MemoryGame.play(difficulty)
+        if bool(MemoryGame) is True:
+            add_score(difficulty=difficulty)
     elif game_choice == 2:
         import GuessGame
         GuessGame.play(difficulty)
+        if bool(GuessGame) is True:
+            add_score(difficulty=difficulty)
     elif game_choice == 3:
         import CurrencyRouletteGame
         CurrencyRouletteGame.play(difficulty)
+        if bool(CurrencyRouletteGame) is True:
+            add_score(difficulty=difficulty)
+    return difficulty, decision

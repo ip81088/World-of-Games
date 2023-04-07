@@ -25,6 +25,6 @@ def play(difficulty):
     sleep(0.7)
     number = get_guess_from_user(difficulty)
     if compare_results(secret_number=secret_number, number=number):
-        print('True')
+        return True
     else:
-        print('False')
+        return False
